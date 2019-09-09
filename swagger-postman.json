@@ -1,0 +1,3283 @@
+{
+    "item": [
+        {
+            "id": "aafb4560-f899-42ea-8d77-a68ecca64ec3",
+            "name": "source",
+            "item": [
+                {
+                    "id": "9e10416e-4977-439e-b33a-f53e55d0bb54",
+                    "name": "/source/",
+                    "request": {
+                        "name": "/source/",
+                        "description": {
+                            "content": "Get information about all sources.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "source",
+                                ""
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "f7ac2922-518b-4023-8af7-8086f403ce95",
+                            "name": "The source object",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "source",
+                                        ""
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"source_name\": \"<string>\",\n  \"parent_source_id\": \"<integer>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"source_name\": \"<string>\",\n  \"parent_source_id\": \"<integer>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n }\n]",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "58371684-67b3-47fe-bca1-de02ff3134ba",
+                    "name": "/source/",
+                    "request": {
+                        "name": "/source/",
+                        "description": {
+                            "content": "Add a source.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "source",
+                                ""
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "method": "POST",
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "source_name",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "key": "parent_source_id",
+                                    "value": "<integer>"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "32872c7b-402a-4d0f-ae51-19d7c96ed258",
+                            "name": "Created",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "source",
+                                        ""
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "POST",
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "source_name",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "parent_source_id",
+                                            "value": "<integer>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"id\": \"<integer>\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "e1836814-9dac-4bf9-a641-4a66b632e185",
+                    "name": "{source-id}",
+                    "item": [
+                        {
+                            "id": "cd781273-e1f8-41f6-8dca-6061c9dda2da",
+                            "name": "/source/:source-id",
+                            "request": {
+                                "name": "/source/:source-id",
+                                "description": {
+                                    "content": "Get basic information about a source.",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "source",
+                                        ":source-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "The source identifier number",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "source-id"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "01af754f-3f44-49f1-b032-6da748b75a2f",
+                                    "name": "The source object",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "source",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "[\n {\n  \"id\": \"<integer>\",\n  \"source_name\": \"<string>\",\n  \"parent_source_id\": \"<integer>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"source_name\": \"<string>\",\n  \"parent_source_id\": \"<integer>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n }\n]",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "d2cbfac3-3ae1-4a77-8acb-59a63010f504",
+                            "name": "/source/:source-id",
+                            "request": {
+                                "name": "/source/:source-id",
+                                "description": {
+                                    "content": "Deletes source based on its ID.",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "source",
+                                        ":source-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "The source identifier number",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "source-id"
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "7097b2db-6ea1-4145-aa97-5752a3324f91",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "source",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "DELETE",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "6e84ec3e-f72a-4607-9385-856ef6284864",
+            "name": "users",
+            "item": [
+                {
+                    "id": "b33c4874-0f00-4a7a-8888-20a50aaef8ee",
+                    "name": "/users/",
+                    "request": {
+                        "name": "/users/",
+                        "description": {
+                            "content": "Get information about all users.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "users",
+                                ""
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "e0aabdff-258c-47e7-94da-54a52d721e4c",
+                            "name": "The user object",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        ""
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "f5341641-cf09-475c-82e8-8025299c2519",
+                    "name": "/users/",
+                    "request": {
+                        "name": "/users/",
+                        "description": {
+                            "content": "Add a user.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "users",
+                                ""
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "method": "POST",
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "name",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "key": "client_id",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "user_source_id",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "key": "address_type",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "key": "locality_id",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "c6a2eb5c-d332-4d69-9596-c8d77797a52f",
+                            "name": "Created",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        ""
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "POST",
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "client_id",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "user_source_id",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "address",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "address_type",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "locality_id",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "phone",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "email",
+                                            "value": "<string>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"id\": \"<integer>\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "bc3b390c-8ef8-4b03-be4b-3745b1a5cea9",
+                    "name": "{user-id}",
+                    "item": [
+                        {
+                            "id": "e1013d89-9c67-43c8-a859-dae78e59e92c",
+                            "name": "/users/:user-id",
+                            "request": {
+                                "name": "/users/:user-id",
+                                "description": {
+                                    "content": "Get basic information about a user.",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        ":user-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "The user identifier number",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "user-id"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "ce3b4aaa-8e9c-4eae-b932-922a2919dce6",
+                                    "name": "The user object",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "[\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "3484d319-d20b-4970-abf8-7124e6752cc7",
+                            "name": "/users/:user-id",
+                            "request": {
+                                "name": "/users/:user-id",
+                                "description": {
+                                    "content": "Update user name based on his ID.",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        ":user-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "The user identifier number",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "user-id"
+                                        }
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "auth": {
+                                    "type": "noauth"
+                                },
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "295ea718-1b94-4e48-9c0a-52915d9dfea2",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/x-www-form-urlencoded"
+                                            }
+                                        ],
+                                        "method": "PUT",
+                                        "body": {
+                                            "mode": "urlencoded",
+                                            "urlencoded": [
+                                                {
+                                                    "key": "name",
+                                                    "value": "<string>"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "3830f80b-9775-4835-b1e9-3a1f615bbcdb",
+                            "name": "/users/:user-id",
+                            "request": {
+                                "name": "/users/:user-id",
+                                "description": {
+                                    "content": "Delete user based on his ID.",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        ":user-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "The user identifier number",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "user-id"
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "499a06ad-a266-475c-9023-d0fb90505d82",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "DELETE",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "7fb8f6d9-e25d-4ca0-8bf2-a230829928f7",
+                            "name": "transactions",
+                            "item": [
+                                {
+                                    "id": "e279f7c8-bc66-41e4-9b82-275817403542",
+                                    "name": "/users/:user-id/transactions",
+                                    "request": {
+                                        "name": "/users/:user-id/transactions",
+                                        "description": {
+                                            "content": "List of Transactions made by User across LT platform based on phone number or email. Atleast one parameter is required.",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                ":user-id",
+                                                "transactions"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "User's ID",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "user-id"
+                                                }
+                                            ]
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/x-www-form-urlencoded"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "auth": {
+                                            "type": "noauth"
+                                        },
+                                        "body": {
+                                            "mode": "urlencoded",
+                                            "urlencoded": [
+                                                {
+                                                    "key": "phone",
+                                                    "value": "<integer>"
+                                                },
+                                                {
+                                                    "key": "email",
+                                                    "value": "<string>"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "ca4d5dd5-609b-411e-8eec-30550ee9c9aa",
+                                            "name": "OK",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        "<integer>",
+                                                        "transactions"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "header": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/x-www-form-urlencoded"
+                                                    }
+                                                ],
+                                                "method": "GET",
+                                                "body": {
+                                                    "mode": "urlencoded",
+                                                    "urlencoded": [
+                                                        {
+                                                            "key": "phone",
+                                                            "value": "<integer>"
+                                                        },
+                                                        {
+                                                            "key": "email",
+                                                            "value": "<string>"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"user_id\": \"<integer>\",\n  \"user_address_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"user_phone_number_id\": \"<integer>\",\n  \"user_email_id\": \"<integer>\",\n  \"outlet_id\": \"<integer>\",\n  \"transaction_date\": \"schema type not provided\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"user_id\": \"<integer>\",\n  \"user_address_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"user_phone_number_id\": \"<integer>\",\n  \"user_email_id\": \"<integer>\",\n  \"outlet_id\": \"<integer>\",\n  \"transaction_date\": \"schema type not provided\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n }\n]",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "1d63cc4d-8367-49f4-b88f-e7081f76eb86",
+                                    "name": "/users/:user-id/transactions",
+                                    "request": {
+                                        "name": "/users/:user-id/transactions",
+                                        "description": {
+                                            "content": "Add a new transaction to the user based on `user-id` and return a `transaction-id`.",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                ":user-id",
+                                                "transactions"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "User's ID",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "user-id"
+                                                }
+                                            ]
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/x-www-form-urlencoded"
+                                            }
+                                        ],
+                                        "method": "POST",
+                                        "auth": {
+                                            "type": "noauth"
+                                        },
+                                        "body": {
+                                            "mode": "urlencoded",
+                                            "urlencoded": [
+                                                {
+                                                    "key": "transaction-date",
+                                                    "value": "<string>"
+                                                },
+                                                {
+                                                    "key": "outlet-id",
+                                                    "value": "<integer>"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "58c73bd2-bd6f-4384-a840-9369e4f037ef",
+                                            "name": "Created",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        "<integer>",
+                                                        "transactions"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "header": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/x-www-form-urlencoded"
+                                                    }
+                                                ],
+                                                "method": "POST",
+                                                "body": {
+                                                    "mode": "urlencoded",
+                                                    "urlencoded": [
+                                                        {
+                                                            "key": "transaction-date",
+                                                            "value": "<string>"
+                                                        },
+                                                        {
+                                                            "key": "outlet-id",
+                                                            "value": "<integer>"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "Created",
+                                            "code": 201,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "{\n \"id\": \"<integer>\"\n}",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "c128a35e-487e-45da-9c7e-897c228343c0",
+                            "name": "roles",
+                            "item": [
+                                {
+                                    "id": "916f52cf-df25-440b-b3b8-d05e4dcb9c9f",
+                                    "name": "/users/:user-id/roles",
+                                    "request": {
+                                        "name": "/users/:user-id/roles",
+                                        "description": {
+                                            "content": "List all the available roles for the user identified by `user-id`.\n",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                ":user-id",
+                                                "roles"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "user identifier number",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "user-id"
+                                                }
+                                            ]
+                                        },
+                                        "method": "GET",
+                                        "auth": {
+                                            "type": "noauth"
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "8a01a7f8-5299-44b0-a85d-5bae55da7d1a",
+                                            "name": "OK",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        "<integer>",
+                                                        "roles"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "method": "GET",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "01dc3df8-ae09-43da-82f4-4e7f08d9f0e9",
+                                    "name": "/users/:user-id/roles",
+                                    "request": {
+                                        "name": "/users/:user-id/roles",
+                                        "description": {
+                                            "content": "Assign roles to a user based on `role-id` or `role-name`. Atleast one parameter needs to be provided.\n",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                ":user-id",
+                                                "roles"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "user identifier number",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "user-id"
+                                                }
+                                            ]
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/x-www-form-urlencoded"
+                                            }
+                                        ],
+                                        "method": "POST",
+                                        "auth": {
+                                            "type": "noauth"
+                                        },
+                                        "body": {
+                                            "mode": "urlencoded",
+                                            "urlencoded": [
+                                                {
+                                                    "key": "role-name",
+                                                    "value": "<string>"
+                                                },
+                                                {
+                                                    "key": "role-id",
+                                                    "value": "<integer>"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "002a3da8-3e85-47cf-b5b5-19c1dced67ac",
+                                            "name": "Created",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        "<integer>",
+                                                        "roles"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "header": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/x-www-form-urlencoded"
+                                                    }
+                                                ],
+                                                "method": "POST",
+                                                "body": {
+                                                    "mode": "urlencoded",
+                                                    "urlencoded": [
+                                                        {
+                                                            "key": "role-name",
+                                                            "value": "<string>"
+                                                        },
+                                                        {
+                                                            "key": "role-id",
+                                                            "value": "<integer>"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "Created",
+                                            "code": 201,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "text/plain"
+                                                }
+                                            ],
+                                            "body": "",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "text"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "ec034319-767c-4318-bce3-59433dc58c34",
+                                    "name": "/users/:user-id/roles",
+                                    "request": {
+                                        "name": "/users/:user-id/roles",
+                                        "description": {
+                                            "content": "Delete all roles assigned to a user based on `user-id`.\n",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                ":user-id",
+                                                "roles"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "user identifier number",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "user-id"
+                                                }
+                                            ]
+                                        },
+                                        "method": "DELETE",
+                                        "auth": {
+                                            "type": "noauth"
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "e0f91100-84ec-47b0-b4f3-27cf78ee5c00",
+                                            "name": "OK",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        "<integer>",
+                                                        "roles"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "method": "DELETE",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "{\n \"message\": \"<string>\"\n}",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "78bd5b5d-f2b3-4cbb-a8c3-2331b47e207a",
+                                    "name": "{role-id}",
+                                    "item": [
+                                        {
+                                            "id": "453b5f0f-5d41-4d1e-b627-44fb861e6d48",
+                                            "name": "/users/:user-id/roles/:role-id",
+                                            "request": {
+                                                "name": "/users/:user-id/roles/:role-id",
+                                                "description": {
+                                                    "content": "Show a role assigned to a user based on `role-id`.\n",
+                                                    "type": "text/plain"
+                                                },
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        ":user-id",
+                                                        "roles",
+                                                        ":role-id"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": [
+                                                        {
+                                                            "description": {
+                                                                "content": "user identifier number",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "user-id"
+                                                        },
+                                                        {
+                                                            "description": {
+                                                                "content": "role identifier number",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "role-id"
+                                                        }
+                                                    ]
+                                                },
+                                                "method": "GET",
+                                                "auth": {
+                                                    "type": "noauth"
+                                                }
+                                            },
+                                            "response": [
+                                                {
+                                                    "id": "261d51f5-7794-4d4f-9526-4f9c3e17997a",
+                                                    "name": "OK",
+                                                    "originalRequest": {
+                                                        "url": {
+                                                            "path": [
+                                                                "users",
+                                                                "<integer>",
+                                                                "roles",
+                                                                "<integer>"
+                                                            ],
+                                                            "host": [
+                                                                "{{baseUrl}}"
+                                                            ],
+                                                            "query": [],
+                                                            "variable": []
+                                                        },
+                                                        "method": "GET",
+                                                        "body": {}
+                                                    },
+                                                    "status": "OK",
+                                                    "code": 200,
+                                                    "header": [
+                                                        {
+                                                            "key": "Content-Type",
+                                                            "value": "application/json"
+                                                        }
+                                                    ],
+                                                    "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                                    "cookie": [],
+                                                    "_postman_previewlanguage": "json"
+                                                }
+                                            ],
+                                            "event": []
+                                        },
+                                        {
+                                            "id": "814fd1bb-d3ab-4405-b493-9ef7e1363656",
+                                            "name": "/users/:user-id/roles/:role-id",
+                                            "request": {
+                                                "name": "/users/:user-id/roles/:role-id",
+                                                "description": {
+                                                    "content": "Delete a role assigned to a user based on `role-id`.\n",
+                                                    "type": "text/plain"
+                                                },
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        ":user-id",
+                                                        "roles",
+                                                        ":role-id"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": [
+                                                        {
+                                                            "description": {
+                                                                "content": "user identifier number",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "user-id"
+                                                        },
+                                                        {
+                                                            "description": {
+                                                                "content": "role identifier number",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "role-id"
+                                                        }
+                                                    ]
+                                                },
+                                                "method": "DELETE",
+                                                "auth": {
+                                                    "type": "noauth"
+                                                }
+                                            },
+                                            "response": [
+                                                {
+                                                    "id": "d65ef6ac-772c-4b19-9ad3-b9cd6fcb08ae",
+                                                    "name": "OK",
+                                                    "originalRequest": {
+                                                        "url": {
+                                                            "path": [
+                                                                "users",
+                                                                "<integer>",
+                                                                "roles",
+                                                                "<integer>"
+                                                            ],
+                                                            "host": [
+                                                                "{{baseUrl}}"
+                                                            ],
+                                                            "query": [],
+                                                            "variable": []
+                                                        },
+                                                        "method": "DELETE",
+                                                        "body": {}
+                                                    },
+                                                    "status": "OK",
+                                                    "code": 200,
+                                                    "header": [
+                                                        {
+                                                            "key": "Content-Type",
+                                                            "value": "application/json"
+                                                        }
+                                                    ],
+                                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                                    "cookie": [],
+                                                    "_postman_previewlanguage": "json"
+                                                }
+                                            ],
+                                            "event": []
+                                        }
+                                    ],
+                                    "event": []
+                                }
+                            ],
+                            "event": []
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "ba550373-6075-47e3-b0ab-43ccbcbb1860",
+                    "name": "/users/lookup",
+                    "request": {
+                        "name": "/users/lookup",
+                        "description": {
+                            "content": "Get user id using user's mobile number or email. Atleast one parameter must be passed.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "users",
+                                "lookup"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "method": "GET",
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "phone",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "88a6694b-86f9-447f-bc63-e2ccbfae6acc",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        "lookup"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "phone",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "email",
+                                            "value": "<string>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"user_id\": \"<integer>\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "41355665-2f53-422e-b926-9e8742d10ba0",
+                    "name": "/users/merge",
+                    "request": {
+                        "name": "/users/merge",
+                        "description": {
+                            "content": "Merge users together based on email and phone number.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "users",
+                                "merge"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "method": "PUT",
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "email",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "<integer>"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "92816796-cb85-4972-af32-db1e8c46b98a",
+                            "name": "Merged",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        "merge"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "email",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "phone",
+                                            "value": "<integer>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/plain"
+                                }
+                            ],
+                            "body": "",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "14fbfea5-6ecd-499d-bfd0-3652322edc3e",
+                    "name": "restaurant",
+                    "item": [
+                        {
+                            "id": "dc7d14a6-bd20-4ffa-8755-c6703bbcc7f6",
+                            "name": "{restaurant-id}",
+                            "item": [
+                                {
+                                    "id": "ee8b085c-dee7-4598-9143-363763ccfc8f",
+                                    "name": "/users/restaurant/:restaurant-id",
+                                    "request": {
+                                        "name": "/users/restaurant/:restaurant-id",
+                                        "description": {
+                                            "content": "See the list of users belonging to a restaurant based on `restaurant-id`.\n",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                "restaurant",
+                                                ":restaurant-id"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "Restaurant ID.",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "restaurant-id"
+                                                }
+                                            ]
+                                        },
+                                        "method": "GET",
+                                        "auth": {
+                                            "type": "noauth"
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "898100ca-5b79-4147-a744-37bbafce5a06",
+                                            "name": "OK",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        "restaurant",
+                                                        "<integer>"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "method": "GET",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "0fc080cf-bc70-4e36-a920-d65ce7ab507f",
+                                    "name": "/users/restaurant/:restaurant-id/transactions",
+                                    "request": {
+                                        "name": "/users/restaurant/:restaurant-id/transactions",
+                                        "description": {
+                                            "content": "List of Transactions made by users for a specific restaurant.",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "users",
+                                                "restaurant",
+                                                ":restaurant-id",
+                                                "transactions"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "Restaurant's ID for which transactions need to be returned.",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "restaurant-id"
+                                                }
+                                            ]
+                                        },
+                                        "method": "GET",
+                                        "auth": {
+                                            "type": "noauth"
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "f5b1a21b-e481-4bca-a945-03bbd4ad8d59",
+                                            "name": "OK",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "users",
+                                                        "restaurant",
+                                                        "<integer>",
+                                                        "transactions"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "method": "GET",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"user_id\": \"<integer>\",\n  \"user_address_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"user_phone_number_id\": \"<integer>\",\n  \"user_email_id\": \"<integer>\",\n  \"outlet_id\": \"<integer>\",\n  \"transaction_date\": \"schema type not provided\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"user_id\": \"<integer>\",\n  \"user_address_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"user_phone_number_id\": \"<integer>\",\n  \"user_email_id\": \"<integer>\",\n  \"outlet_id\": \"<integer>\",\n  \"transaction_date\": \"schema type not provided\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\"\n }\n]",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                }
+                            ],
+                            "event": []
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "fd38e0ef-b45e-460e-922d-b5043bbec313",
+                    "name": "/users/source/:source-id",
+                    "request": {
+                        "name": "/users/source/:source-id",
+                        "description": {
+                            "content": "See the list of users belonging to a restaurant based on `source-id`.\n",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "users",
+                                "source",
+                                ":source-id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": [
+                                {
+                                    "description": {
+                                        "content": "Source ID.",
+                                        "type": "text/plain"
+                                    },
+                                    "type": "any",
+                                    "value": "<integer>",
+                                    "key": "source-id"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "bd8d5582-4fa3-4d3d-a0f9-0a315cbf2400",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "users",
+                                        "source",
+                                        "<integer>"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"client_id\": \"<integer>\",\n  \"user_source_id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"user_account_id\": \"<integer>\",\n  \"user_account_type\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "a19cd1c8-e9cf-4b3e-933d-d1bedcfb7193",
+            "name": "address",
+            "item": [
+                {
+                    "id": "7db7c7e3-18eb-43cf-817d-959a2c4cfced",
+                    "name": "{address-id}",
+                    "item": [
+                        {
+                            "id": "c8b9ad74-67a2-4ff8-bfdf-8f7cc5ba2ffc",
+                            "name": "/address/:address-id",
+                            "request": {
+                                "name": "/address/:address-id",
+                                "description": {
+                                    "content": "Get address details of the user based on his address ID.    \n",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "address",
+                                        ":address-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "User's address ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "address-id"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "f16549a0-5fe4-4a0e-b10f-88c4c58a7f7d",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "address",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "[\n {\n  \"id\": \"<integer>\",\n  \"user_id\": \"<integer>\",\n  \"address\": \"<string>\",\n  \"address_type\": \"<string>\",\n  \"locality_id\": \"<integer>\",\n  \"status\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"user_id\": \"<integer>\",\n  \"address\": \"<string>\",\n  \"address_type\": \"<string>\",\n  \"locality_id\": \"<integer>\",\n  \"status\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "0a8d0e49-333b-4934-9083-43325bcdd4e3",
+                            "name": "/address/:address-id",
+                            "request": {
+                                "name": "/address/:address-id",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "address",
+                                        ":address-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "User's address ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "address-id"
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "be517391-7371-4ce9-b59b-e0ef2492b797",
+                                    "name": "OK\n",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "address",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "PUT",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "f1fed9d4-1173-4f1a-9b28-f227024444e6",
+                            "name": "/address/:address-id",
+                            "request": {
+                                "name": "/address/:address-id",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "address",
+                                        ":address-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "User's address ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "address-id"
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "0be56f23-58a7-4aab-8280-68e94e426563",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "address",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "DELETE",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "f9a1053d-7063-48be-b49b-013cb2e3e035",
+            "name": "capabilities",
+            "item": [
+                {
+                    "id": "0d3cc855-f32f-46e6-8144-287bf1da62da",
+                    "name": "/capabilities",
+                    "request": {
+                        "name": "/capabilities",
+                        "description": {
+                            "content": "List all the available capabilities.\n",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "capabilities"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "85dd6609-168d-4a84-a964-874577dfe692",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "capabilities"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "665290e2-5ce6-4cca-9b0e-7d6d1679a1d8",
+                    "name": "/capabilities",
+                    "request": {
+                        "name": "/capabilities",
+                        "description": {
+                            "content": "Generate a new capability\n",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "capabilities"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "method": "POST",
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "name",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "5b2293d3-22ee-4c02-882e-0d549f56e828",
+                            "name": "Created",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "capabilities"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "POST",
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"id\": \"<integer>\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "cd167e59-88d9-40b2-8309-5481429c4d0e",
+                    "name": "{capability-id}",
+                    "item": [
+                        {
+                            "id": "90cf164a-58c5-48b5-8955-b4e85b5f9ad9",
+                            "name": "/capabilities/:capability-id",
+                            "request": {
+                                "name": "/capabilities/:capability-id",
+                                "description": {
+                                    "content": "Get a specific Capability.\n",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "capabilities",
+                                        ":capability-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "Capability ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "capability-id"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "26f32eef-7f83-406d-b9b2-01f46bb0983f",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "capabilities",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "b8067dd6-ac30-4d84-8547-3ecde7619f5e",
+                            "name": "/capabilities/:capability-id",
+                            "request": {
+                                "name": "/capabilities/:capability-id",
+                                "description": {
+                                    "content": "Update a capability based on its `capability-id`.\n",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "capabilities",
+                                        ":capability-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "Capability ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "capability-id"
+                                        }
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "auth": {
+                                    "type": "noauth"
+                                },
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "8b71308c-927f-4ef6-8f51-54d9a406cb76",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "capabilities",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/x-www-form-urlencoded"
+                                            }
+                                        ],
+                                        "method": "PUT",
+                                        "body": {
+                                            "mode": "urlencoded",
+                                            "urlencoded": [
+                                                {
+                                                    "key": "name",
+                                                    "value": "<string>"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "aec4bacd-241e-45d5-8e08-4a573fda43fc",
+                            "name": "/capabilities/:capability-id",
+                            "request": {
+                                "name": "/capabilities/:capability-id",
+                                "description": {
+                                    "content": "Delete a capability based on its `capability-id`.\n",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "capabilities",
+                                        ":capability-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "Capability ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "capability-id"
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "5374918f-9e42-485c-925f-3d9b85020291",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "capabilities",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "DELETE",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "fb501f36-3d7e-483b-9aa2-6095591e024c",
+            "name": "roles",
+            "item": [
+                {
+                    "id": "482354de-d893-4165-a88f-5ef7ef1a750e",
+                    "name": "/roles",
+                    "request": {
+                        "name": "/roles",
+                        "description": {
+                            "content": "List all the available roles.\n",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "roles"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "20dd0891-e326-4e37-a1d2-52a464feb243",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "roles"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "6820f8ee-d9e6-4981-990e-37d56593d92b",
+                    "name": "/roles",
+                    "request": {
+                        "name": "/roles",
+                        "description": {
+                            "content": "Generate a new role",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "roles"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "method": "POST",
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "name",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "d7118d9f-f844-44de-a0c3-4c93eba44a90",
+                            "name": "Created",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "roles"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "POST",
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"id\": \"<integer>\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "321a67f1-fefe-443d-945d-46a805cead3c",
+                    "name": "{role-id}",
+                    "item": [
+                        {
+                            "id": "fd6b8f95-f2db-4f74-9690-9c50a0c12319",
+                            "name": "/roles/:role-id",
+                            "request": {
+                                "name": "/roles/:role-id",
+                                "description": {
+                                    "content": "Get a specific Role based on its `role-id`.\n",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "roles",
+                                        ":role-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "Role ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "role-id"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "fd872ba2-99e7-4c5d-8365-a290aed31a35",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "roles",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "14340ae3-9ac0-43e1-9378-1503bb79bf75",
+                            "name": "/roles/:role-id",
+                            "request": {
+                                "name": "/roles/:role-id",
+                                "description": {
+                                    "content": "Update a role based on its `role-id`.\n",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "roles",
+                                        ":role-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "Role ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "role-id"
+                                        }
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/x-www-form-urlencoded"
+                                    }
+                                ],
+                                "method": "PUT",
+                                "auth": {
+                                    "type": "noauth"
+                                },
+                                "body": {
+                                    "mode": "urlencoded",
+                                    "urlencoded": [
+                                        {
+                                            "key": "name",
+                                            "value": "<string>"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "4ece7a8e-a004-4229-a1aa-6e2bf0b4782a",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "roles",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/x-www-form-urlencoded"
+                                            }
+                                        ],
+                                        "method": "PUT",
+                                        "body": {
+                                            "mode": "urlencoded",
+                                            "urlencoded": [
+                                                {
+                                                    "key": "name",
+                                                    "value": "<string>"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "b7b8bd6f-619e-4318-a449-b34e7bcec436",
+                            "name": "/roles/:role-id",
+                            "request": {
+                                "name": "/roles/:role-id",
+                                "description": {
+                                    "content": "Delete a role based on its `role-id`.\n",
+                                    "type": "text/plain"
+                                },
+                                "url": {
+                                    "path": [
+                                        "roles",
+                                        ":role-id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "description": {
+                                                "content": "Role ID",
+                                                "type": "text/plain"
+                                            },
+                                            "type": "any",
+                                            "value": "<integer>",
+                                            "key": "role-id"
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "1f510f4c-6fad-4d51-b0bc-06761c173798",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "roles",
+                                                "<integer>"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "DELETE",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "3f0c6551-3cd7-4312-827b-a1636f954a10",
+                            "name": "capabilities",
+                            "item": [
+                                {
+                                    "id": "920f0ad1-5e4d-40ac-9d96-09436bff1dc4",
+                                    "name": "/roles/:role-id/capabilities",
+                                    "request": {
+                                        "name": "/roles/:role-id/capabilities",
+                                        "description": {
+                                            "content": "List all the available capabilities for the role identified by `role-id`.\n",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "roles",
+                                                ":role-id",
+                                                "capabilities"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "role identifier number",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "role-id"
+                                                }
+                                            ]
+                                        },
+                                        "method": "GET",
+                                        "auth": {
+                                            "type": "noauth"
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "9c0c2872-66c3-41f5-8916-53dd5a74182f",
+                                            "name": "OK",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "roles",
+                                                        "<integer>",
+                                                        "capabilities"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "method": "GET",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "164c8ce1-0469-4a47-8bd9-306063765183",
+                                    "name": "/roles/:role-id/capabilities",
+                                    "request": {
+                                        "name": "/roles/:role-id/capabilities",
+                                        "description": {
+                                            "content": "Assign capabilities to a role based on `capability-id` or `capability-name`. Atleast one parameter needs to be provided.\n",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "roles",
+                                                ":role-id",
+                                                "capabilities"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "role identifier number",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "role-id"
+                                                }
+                                            ]
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/x-www-form-urlencoded"
+                                            }
+                                        ],
+                                        "method": "POST",
+                                        "auth": {
+                                            "type": "noauth"
+                                        },
+                                        "body": {
+                                            "mode": "urlencoded",
+                                            "urlencoded": [
+                                                {
+                                                    "key": "capability-name",
+                                                    "value": "<string>"
+                                                },
+                                                {
+                                                    "key": "capability-id",
+                                                    "value": "<integer>"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "77213fa3-adaa-4717-83d0-f2df29002e52",
+                                            "name": "Created",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "roles",
+                                                        "<integer>",
+                                                        "capabilities"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "header": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "value": "application/x-www-form-urlencoded"
+                                                    }
+                                                ],
+                                                "method": "POST",
+                                                "body": {
+                                                    "mode": "urlencoded",
+                                                    "urlencoded": [
+                                                        {
+                                                            "key": "capability-name",
+                                                            "value": "<string>"
+                                                        },
+                                                        {
+                                                            "key": "capability-id",
+                                                            "value": "<integer>"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "Created",
+                                            "code": 201,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "text/plain"
+                                                }
+                                            ],
+                                            "body": "",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "text"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "156e0961-a1e1-4fec-b237-a8db9c28acc4",
+                                    "name": "/roles/:role-id/capabilities",
+                                    "request": {
+                                        "name": "/roles/:role-id/capabilities",
+                                        "description": {
+                                            "content": "Delete all capabilities assigned to the role based on `role-id`.\n",
+                                            "type": "text/plain"
+                                        },
+                                        "url": {
+                                            "path": [
+                                                "roles",
+                                                ":role-id",
+                                                "capabilities"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "description": {
+                                                        "content": "role identifier number",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "<integer>",
+                                                    "key": "role-id"
+                                                }
+                                            ]
+                                        },
+                                        "method": "DELETE",
+                                        "auth": {
+                                            "type": "noauth"
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "aed6195c-a781-42af-bd0a-8ee28507b9a7",
+                                            "name": "OK",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "roles",
+                                                        "<integer>",
+                                                        "capabilities"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": []
+                                                },
+                                                "method": "DELETE",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "{\n \"message\": \"<string>\"\n}",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": []
+                                },
+                                {
+                                    "id": "e92e524a-74d6-4ea2-a326-7cd07bfa31b6",
+                                    "name": "{capability-id}",
+                                    "item": [
+                                        {
+                                            "id": "7ff67202-4100-4bec-958d-097420795d72",
+                                            "name": "/roles/:role-id/capabilities/:capability-id",
+                                            "request": {
+                                                "name": "/roles/:role-id/capabilities/:capability-id",
+                                                "description": {
+                                                    "content": "Show a capability assigned to a role based on `capability-id`.\n",
+                                                    "type": "text/plain"
+                                                },
+                                                "url": {
+                                                    "path": [
+                                                        "roles",
+                                                        ":role-id",
+                                                        "capabilities",
+                                                        ":capability-id"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": [
+                                                        {
+                                                            "description": {
+                                                                "content": "role identifier number",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "role-id"
+                                                        },
+                                                        {
+                                                            "description": {
+                                                                "content": "capability identifier number",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "capability-id"
+                                                        }
+                                                    ]
+                                                },
+                                                "method": "GET",
+                                                "auth": {
+                                                    "type": "noauth"
+                                                }
+                                            },
+                                            "response": [
+                                                {
+                                                    "id": "75e92670-b726-4d8f-9555-f2b64ba3fb0c",
+                                                    "name": "OK",
+                                                    "originalRequest": {
+                                                        "url": {
+                                                            "path": [
+                                                                "roles",
+                                                                "<integer>",
+                                                                "capabilities",
+                                                                "<integer>"
+                                                            ],
+                                                            "host": [
+                                                                "{{baseUrl}}"
+                                                            ],
+                                                            "query": [],
+                                                            "variable": []
+                                                        },
+                                                        "method": "GET",
+                                                        "body": {}
+                                                    },
+                                                    "status": "OK",
+                                                    "code": 200,
+                                                    "header": [
+                                                        {
+                                                            "key": "Content-Type",
+                                                            "value": "application/json"
+                                                        }
+                                                    ],
+                                                    "body": "[\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n },\n {\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"created_at\": \"schema type not provided\",\n  \"updated_at\": \"schema type not provided\",\n  \"deleted_at\": \"schema type not provided\"\n }\n]",
+                                                    "cookie": [],
+                                                    "_postman_previewlanguage": "json"
+                                                }
+                                            ],
+                                            "event": []
+                                        },
+                                        {
+                                            "id": "45c1880c-e264-4a5c-a1a5-00e5f88e389c",
+                                            "name": "/roles/:role-id/capabilities/:capability-id",
+                                            "request": {
+                                                "name": "/roles/:role-id/capabilities/:capability-id",
+                                                "description": {
+                                                    "content": "Delete a capability assigned to a role based on `capability-id`.\n",
+                                                    "type": "text/plain"
+                                                },
+                                                "url": {
+                                                    "path": [
+                                                        "roles",
+                                                        ":role-id",
+                                                        "capabilities",
+                                                        ":capability-id"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [],
+                                                    "variable": [
+                                                        {
+                                                            "description": {
+                                                                "content": "role identifier number",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "role-id"
+                                                        },
+                                                        {
+                                                            "description": {
+                                                                "content": "Capability ID",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "type": "any",
+                                                            "value": "<integer>",
+                                                            "key": "capability-id"
+                                                        }
+                                                    ]
+                                                },
+                                                "method": "DELETE",
+                                                "auth": {
+                                                    "type": "noauth"
+                                                }
+                                            },
+                                            "response": [
+                                                {
+                                                    "id": "decd2c7c-96ac-4d97-b1a9-2c6d539115db",
+                                                    "name": "OK",
+                                                    "originalRequest": {
+                                                        "url": {
+                                                            "path": [
+                                                                "roles",
+                                                                "<integer>",
+                                                                "capabilities",
+                                                                "<integer>"
+                                                            ],
+                                                            "host": [
+                                                                "{{baseUrl}}"
+                                                            ],
+                                                            "query": [],
+                                                            "variable": []
+                                                        },
+                                                        "method": "DELETE",
+                                                        "body": {}
+                                                    },
+                                                    "status": "OK",
+                                                    "code": 200,
+                                                    "header": [
+                                                        {
+                                                            "key": "Content-Type",
+                                                            "value": "application/json"
+                                                        }
+                                                    ],
+                                                    "body": "{\n \"message\": \"<string>\"\n}",
+                                                    "cookie": [],
+                                                    "_postman_previewlanguage": "json"
+                                                }
+                                            ],
+                                            "event": []
+                                        }
+                                    ],
+                                    "event": []
+                                }
+                            ],
+                            "event": []
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "id": "baseUrl",
+            "type": "string",
+            "value": "http://localhost:8080/api/v1"
+        }
+    ],
+    "info": {
+        "_postman_id": "4cec3353-78e9-4002-af9c-ff6be18b0263",
+        "name": "API",
+        "version": {},
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "",
+            "type": "text/plain"
+        }
+    }
+}

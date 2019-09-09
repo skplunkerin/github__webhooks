@@ -1,0 +1,26 @@
+{
+  "name": "github__webhooks",
+  "version": "1.0.0",
+  "description": "Testing Github webhooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "./script.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://skplunkerin@github.com/skplunkerin/github__webhooks.git"
+  },
+  "keywords": [
+    "github",
+    "webhooks",
+    "swagger",
+    "postman-api"
+  ],
+  "author": "Chris Reynolds",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skplunkerin/github__webhooks/issues"
+  },
+  "homepage": "https://github.com/skplunkerin/github__webhooks#readme"
+}
