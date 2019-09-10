@@ -2,7 +2,7 @@ openapi: 3.0.0
 servers:
   - url: 'http://localhost:8080/api/v1'
 info:
-  version: v1.1
+  version: v1.2
   title: API
   description: ''
   termsOfService: 'http://xyz.in/about/legal/terms/api'
@@ -32,7 +32,18 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Source'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    source_name:
+                      type: string
+                    parent_source_id:
+                      type: integer
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
     post:
       tags:
         - Source
@@ -65,7 +76,12 @@ paths:
   '/source/{source-id}':
     get:
       parameters:
-        - $ref: '#/components/parameters/source-id'
+        - name: source-id
+          in: path
+          description: The source identifier number
+          required: true
+          schema:
+            type: integer
       tags:
         - Source
       description: Get basic information about a source.
@@ -77,10 +93,26 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Source'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    source_name:
+                      type: string
+                    parent_source_id:
+                      type: integer
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
     delete:
       parameters:
-        - $ref: '#/components/parameters/source-id'
+        - name: source-id
+          in: path
+          description: The source identifier number
+          required: true
+          schema:
+            type: integer
       tags:
         - Source
       description: Deletes source based on its ID.
@@ -107,7 +139,28 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/User'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    client_id:
+                      type: integer
+                    user_source_id:
+                      type: integer
+                    name:
+                      type: string
+                    status:
+                      type: string
+                    user_account_id:
+                      type: integer
+                    user_account_type:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     post:
       tags:
         - Users
@@ -159,7 +212,12 @@ paths:
   '/users/{user-id}':
     get:
       parameters:
-        - $ref: '#/components/parameters/user-id'
+        - name: user-id
+          in: path
+          description: The user identifier number
+          required: true
+          schema:
+            type: integer
       tags:
         - Users
       description: Get basic information about a user.
@@ -171,10 +229,36 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/User'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    client_id:
+                      type: integer
+                    user_source_id:
+                      type: integer
+                    name:
+                      type: string
+                    status:
+                      type: string
+                    user_account_id:
+                      type: integer
+                    user_account_type:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     put:
       parameters:
-        - $ref: '#/components/parameters/user-id'
+        - name: user-id
+          in: path
+          description: The user identifier number
+          required: true
+          schema:
+            type: integer
       tags:
         - Users
       description: Update user name based on his ID.
@@ -201,7 +285,12 @@ paths:
                 - name
     delete:
       parameters:
-        - $ref: '#/components/parameters/user-id'
+        - name: user-id
+          in: path
+          description: The user identifier number
+          required: true
+          schema:
+            type: integer
       tags:
         - Users
       description: Delete user based on his ID.
@@ -219,9 +308,7 @@ paths:
     get:
       tags:
         - Users
-      description: >-
-        Get user id using user's mobile number or email. Atleast one parameter
-        must be passed.
+      description: Get user id using user's mobile number or email. Atleast one parameter must be passed.
       responses:
         '200':
           description: OK
@@ -271,9 +358,8 @@ paths:
     get:
       tags:
         - Users
-      description: >
-        See the list of users belonging to a restaurant based on
-        `restaurant-id`.
+      description: |
+        See the list of users belonging to a restaurant based on `restaurant-id`.
       responses:
         '200':
           description: OK
@@ -282,7 +368,28 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/User'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    client_id:
+                      type: integer
+                    user_source_id:
+                      type: integer
+                    name:
+                      type: string
+                    status:
+                      type: string
+                    user_account_id:
+                      type: integer
+                    user_account_type:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
       parameters:
         - name: restaurant-id
           in: path
@@ -304,7 +411,28 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/User'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    client_id:
+                      type: integer
+                    user_source_id:
+                      type: integer
+                    name:
+                      type: string
+                    status:
+                      type: string
+                    user_account_id:
+                      type: integer
+                    user_account_type:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
       parameters:
         - name: source-id
           in: path
@@ -333,7 +461,26 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Address'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    user_id:
+                      type: integer
+                    address:
+                      type: string
+                    address_type:
+                      type: string
+                    locality_id:
+                      type: integer
+                    status:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     put:
       parameters:
         - name: address-id
@@ -395,7 +542,28 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Transaction'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    user_id:
+                      type: integer
+                    user_address_id:
+                      type: integer
+                    source_id:
+                      type: integer
+                    user_phone_number_id:
+                      type: integer
+                    user_email_id:
+                      type: integer
+                    outlet_id:
+                      type: integer
+                    transaction_date:
+                      format: date
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
   '/users/{user-id}/transactions':
     parameters:
       - name: user-id
@@ -407,9 +575,7 @@ paths:
     get:
       tags:
         - Transaction
-      description: >-
-        List of Transactions made by User across LT platform based on phone
-        number or email. Atleast one parameter is required.
+      description: List of Transactions made by User across LT platform based on phone number or email. Atleast one parameter is required.
       responses:
         '200':
           description: OK
@@ -418,7 +584,28 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Transaction'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    user_id:
+                      type: integer
+                    user_address_id:
+                      type: integer
+                    source_id:
+                      type: integer
+                    user_phone_number_id:
+                      type: integer
+                    user_email_id:
+                      type: integer
+                    outlet_id:
+                      type: integer
+                    transaction_date:
+                      format: date
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -434,9 +621,7 @@ paths:
     post:
       tags:
         - Transaction
-      description: >-
-        Add a new transaction to the user based on `user-id` and return a
-        `transaction-id`.
+      description: Add a new transaction to the user based on `user-id` and return a `transaction-id`.
       responses:
         '201':
           description: Created
@@ -473,7 +658,18 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Capabilities'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     post:
       tags:
         - Capabilities
@@ -521,7 +717,18 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Capabilities'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     put:
       tags:
         - Capabilities
@@ -577,7 +784,18 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Roles'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     post:
       tags:
         - Roles
@@ -622,7 +840,18 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Roles'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     put:
       tags:
         - Roles
@@ -685,13 +914,23 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Roles'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     post:
       tags:
         - Mapping
-      description: >
-        Assign roles to a user based on `role-id` or `role-name`. Atleast one
-        parameter needs to be provided.
+      description: |
+        Assign roles to a user based on `role-id` or `role-name`. Atleast one parameter needs to be provided.
       responses:
         '201':
           description: Created
@@ -749,7 +988,18 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Roles'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     delete:
       parameters:
         - name: user-id
@@ -789,9 +1039,8 @@ paths:
     get:
       tags:
         - Mapping
-      description: >
-        List all the available capabilities for the role identified by
-        `role-id`.
+      description: |
+        List all the available capabilities for the role identified by `role-id`.
       responses:
         '200':
           description: OK
@@ -800,13 +1049,23 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Capabilities'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     post:
       tags:
         - Mapping
-      description: >
-        Assign capabilities to a role based on `capability-id` or
-        `capability-name`. Atleast one parameter needs to be provided.
+      description: |
+        Assign capabilities to a role based on `capability-id` or `capability-name`. Atleast one parameter needs to be provided.
       responses:
         '201':
           description: Created
@@ -864,7 +1123,18 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Capabilities'
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    created_at:
+                      format: date-time
+                    updated_at:
+                      format: date-time
+                    deleted_at:
+                      format: date-time
     delete:
       parameters:
         - name: role-id
@@ -1072,3 +1342,4 @@ components:
           type: integer
         capability_id:
           type: integer
+

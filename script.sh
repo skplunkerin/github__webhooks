@@ -1,4 +1,4 @@
 #!/bin/sh
 
-swagger-cli bundle -r -t yaml sample-swagger.yaml > swagger-bundle.yaml
-openapi2postmanv2 -s swagger-bundle.yaml -o swagger-postman.json -p
+swagger-cli bundle -r -t yaml docs/swagger/swagger.yaml > docs/swagger/swagger-bundle.yaml
+openapi2postmanv2 -s docs/swagger/swagger-bundle.yaml -o docs/swagger/postman-import-files/swagger-postman.json -p
